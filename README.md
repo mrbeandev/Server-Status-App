@@ -1,3 +1,6 @@
+![Screenshot 2024-05-15 200624](https://github.com/mrbeandev/Server-Status-App/assets/34623886/6f34a6ec-01e6-4025-9568-df63e673df88)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
