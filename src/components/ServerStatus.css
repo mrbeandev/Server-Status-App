@@ -1,0 +1,157 @@
+/* Import Custom Font */
+@font-face {
+    font-family: 'neu';
+    src: url('fonts/NEUEKABEL-BOOK.OTF') format('opentype');
+}
+
+/* Global Styles */
+* {
+    font-family: 'neu', sans-serif; /* Apply custom font to all elements */
+}
+
+/* Container Styles */
+.server-status-container {
+    position: relative;
+    background: linear-gradient(90deg, #0f0c29, #2b2661, #24243e);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease-out infinite;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 20vh;
+}
+
+/* Animation Styles */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Shooting Stars Styles */
+.shooting-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.shooting-star {
+    fill: rgba(255, 255, 255, 0.7);
+    animation: shootingAnimation 5s linear infinite; /* Adjust duration for continuous flow */
+}
+
+@keyframes shootingAnimation {
+    0% {
+        transform: translateX(-10%); /* Start slightly off-screen to prevent abrupt appearance */
+    }
+
+    100% {
+        transform: translateX(110%); /* Move slightly off-screen to prevent abrupt disappearance */
+    }
+}
+
+/* Live Indicator Styles */
+.live-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    animation: pulseAnimation 2s infinite;
+}
+
+.live-circle {
+    fill: green;
+}
+
+/* Title Styles */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Status List Styles */
+.status-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Status Item Styles */
+.status-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.status-item p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.status-item span {
+    font-size: 16px;
+}
+
+/* Online Status Styles */
+.online {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Offline Status Styles */
+.offline {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Loader Styles */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
